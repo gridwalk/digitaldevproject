@@ -1,1 +1,30 @@
-Hello World!
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>A-Frame Scene with Blink Controls</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-blink-controls@1.0.0/dist/aframe-blink-controls.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Add blink controls -->
+      <a-entity id="camera" camera wasd-controls blink-controls="cameraRig: #cameraRig"></a-entity>
+      
+      <!-- Create a camera rig -->
+      <a-entity id="cameraRig">
+        <a-entity camera position="0 1.6 0"></a-entity>
+      </a-entity>
+
+      <!-- Add multiple cubes -->
+      <a-entity position="0 0 -5">
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-box position="1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-box position="0 0.5 -2" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-box position="0 0.5 -4" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-box position="-2 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-box position="2 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
